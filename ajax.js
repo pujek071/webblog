@@ -9,7 +9,7 @@ function getXMLHttpRequest(){
 var xmlhttp = getXMLHttpRequest();
 function sendRequest(pageURL,ElementID){
     var obj = document.getElementById(ElementID);
-	obj.innerHTML = '<center><br><img src=images/muter.gif></center>';
+	obj.innerHTML = '<center><br><img src=img/muter.gif></center>';
 	if(xmlhttp.readyState == 4 || xmlhttp.readyState == 0){
 		xmlhttp.open('GET',pageURL,true);
 		xmlhttp.onreadystatechange = function(){
