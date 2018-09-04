@@ -1,0 +1,267 @@
+body{
+	margin: 0 ;
+	padding:0px;
+	color: #000;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 1.5em; 
+	height: 100%; 
+	max-height: 100%;
+	background:#fff;
+	
+  }
+
+a{
+	text-decoration:none;
+	color:#000;
+}
+#wrapper{
+	float:left;
+	width: 100%;
+	margin:0px auto;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
+#head{
+	color:#fff;
+	height:90px;
+	border:1px solid black;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	background:url(../img/wall.jpg) no-repeat;
+	width:100%;
+	-webkit-box-shadow: 0 8px 6px -6px RED;
+	   -moz-box-shadow: 0 8px 6px -6px RED;
+	        box-shadow: 0 8px 6px -6px RED;
+
+	}
+
+#hdw{
+	width:400px;
+	float:right;
+	height:90px;
+	border:0px solid black;
+	margin-top:auto;
+	background:url(../img/hdbg.png) no-repeat;
+}
+#headw{
+border: 0px solid black;
+padding:5px;
+color: #fff;
+float:right;
+margin-top:50px;
+margin-right:70px;
+
+}
+.headw2{
+border: 0px solid black;
+color: #000;
+float:right;
+height:20px;
+margin-top:0px;
+margin-right:85px;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+	
+
+}
+	
+.headicon{
+	float:left;
+	margin-left: 135px;
+}
+
+.icon{
+	color : #fff;
+	border: 0px solid black;
+	width:190px;
+	height:75px;
+}
+.logos{
+	color : #fff;
+	border: 0px solid black;
+	width:700px;
+	height:334px;
+	margin-left:16px;
+}
+
+#konten{
+	color:#000;
+	width:100%;
+	margin-top:10px;
+	border: 0px solid black;
+}
+/*div id tengah*/
+#tengah{
+	width:100%;
+	color:#000;
+	margin-top:2px;
+	border:0px solid black;
+  
+	}
+	
+#tengah h2{
+	color : #000;
+	font-size: 14px;
+	margin-top:50px;
+	margin-left:10px;
+	border-bottom:1px solid black;
+}
+
+.isi{
+	width:1000px;
+	color:#000;
+	float:left;
+	margin-bottom: 1px;
+	border:0px solid black;
+	background:#fff;
+  
+}
+.isimen{
+	width:250px;
+	color:#000;
+	float:right;
+	position:fixed;
+	margin-bottom: 1px;
+	border:0px solid;
+	background:#fff;
+	
+  
+}
+
+#cenber{
+	border-bottom: 1px solid #c0c0c0;
+	color:#000;
+}
+#cenber h1{
+	color : #000;
+	font-size: 16px;
+	border-bottom:1px solid red;
+}
+#cenber .img{
+	height:100px;
+	width: 200px;
+	float:left;
+	margin-top:10px;
+	margin-left:10px;
+	margin-right:10px;
+	border:0px solid black ;
+}
+#cenber .kont{
+	border : 0px solid black;
+	width: 700px;
+	float:right;
+	color:#000;
+	margin-top:10px;
+	margin-right:70px;
+}
+#cenberview{
+	border:0px solid black;
+	width:1000px;
+	color:#000;
+	margin-bottom: 10px;
+	margin-left:40px;
+	background:#fff;
+	
+}
+#cenberview .img{
+	height:300px;
+	width: 600px;
+	margin-top:10px;
+	margin-right:10px;
+	border:0px solid black ;
+}
+#cenberview .jud{
+	border-bottom: 1px solid red;
+	width:100%px;
+}
+#cenberview h2{
+	font-size:30px;
+	border-bottom: 0px solid red;
+}
+#cenberview .cenberkont{
+	border : 0px solid black;
+	float: right;
+}
+/*div id kanan*/
+#kanan{
+	width:250px;
+	margin: 1px auto;
+	border: 0px solid #000000;
+	color:#000;
+	float:right;
+	margin-top:5px;
+	margin-left:0px;
+	height: 500px;
+	background:#fff;
+	border-left:0px solid black;
+	
+	}
+#kanan h3{
+	color : #166d82;
+	font-size: 16px;
+	text-align:center;
+	border-bottom:1px solid black;
+	background:#c0c0;
+}
+
+#popler{
+	border: 0px solid black;
+}
+#popler .img {
+	border:1px solid black;
+	width:240px;
+	height:75px;
+	margin-left:3px;
+}
+#popler .kontpop{
+	border: 0px solid black;
+}
+#popler .kontpop h1{
+	font-size:12px;
+	background:#0036e4;
+	color:#fff;
+}
+
+#menus{
+	border: 1px solid black;
+	margin-left: 13px;
+}
+#kiri{
+	width:220px;
+	height:610px;
+	color:#000;
+	float:;
+	margin-bottom: 1px;
+	border-left:1px solid grey;
+}
+.s  {
+ width:54px;
+ border:0px solid white;
+ text-align:center;
+ cursor:pointer;
+ height:53px;
+ color:#fff;
+ background:url(../img/kat.png) no-repeat;
+ float:left;
+ position:fixed;
+ }
+ .s2 {
+ width:auto;
+ height:50px;
+ color:#fff;
+ margin-left:59px;
+ margin-top:10px;
+ float:lift;
+ background:#000;
+ display:none;
+ opacity:0.5;
+ position:fixed;
+ -moz-border-radius:4px;
+ -webkit-border-radius:4px;
+
+
