@@ -1,0 +1,211 @@
+.slide  {
+ width:980px;
+ margin-top:10px;
+ border:2px solid white;
+ -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+
+}	
+
+.slide h2 {
+ cursor:pointer;
+ margin:0px 0px;
+ padding:7px 15px;
+ background-color:#000;
+ font:bold 11px Verdana,Arial,Sans-Serif;
+ color:#e6e6e6;
+ }
+
+.slide .isi {
+ background-image: -moz-linear-gradient(top, #fff, #acafaf);
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#acafaf));	
+ padding:10px 15px;
+ color:black;
+ height:390px;  
+ 
+}
+.slide .left{
+	width:278px;
+	margin-top:3px;
+	margin-bottom:3px;
+	color:#000;
+	float:left;
+	background:#fff;
+	}
+.slide h2.active {
+ background-color:grey;
+}
+a#sundaboy:link {color:blue;}
+a#sundaboy {text-decoration:none;}
+a#sundaboy:visited {color:black;}
+a#sundaboy:hover {color:red;}
+
+a#sund:link {color:black;
+	-moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -moz-animation-name: slidein;
+    -webkit-animation-name: slidein;
+	-o-transition:2s ease-out; -moz-transition:2s ease-out; -webkit-transition:2s ease-out;
+    }
+a#sund:visited {color:black;}
+a#sund:hover {text-shadow:0 0 10px blue;}
+
+#kotak-dialog {
+  position:absolute;
+  top:20%;
+  left:50%;
+  margin:0px 0px 0px -200px;
+  width:700px;
+  height:auto;
+  overflow:hidden;
+  background-color:#fff;
+  -webkit-box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+  -moz-box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+  box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+  z-index:1000;
+  display:none;
+  -o-transition:2s ease-out; -moz-transition:2s ease-out; -webkit-transition:2s ease-out
+}
+#kotak-dialog *:focus {
+  outline:none;
+}
+
+#kotak-dialog h3.title {
+  background-color:#000;
+  padding:10px 15px;
+  color:#fff;
+  font:normal 16px Arial,Sans-Serif;
+  margin:0px 0px 0px 0px;
+  position:relative;
+}
+
+#kotak-dialog h3.title a {
+  position:absolute;
+  top:10px;
+  right:15px;
+  color:#fff;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+#kotak-dialog .isi-dialog {
+  margin:15px;
+  font:normal 12px Arial,Sans-Serif;
+}
+
+#kotak-dialog .button-wrapper {
+  padding:10px 15px 0px;
+  border-top:1px solid #ddd;
+  margin-top:15px;
+}
+
+#kotak-dialog .button-wrapper button {
+  background-color:#FF0C39;
+  border:none;
+  font:bold 12px Arial,Sans-Serif;
+  color:#fff;
+  padding:5px 10px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  cursor:pointer;
+}
+
+#kotak-dialog .button-wrapper button:hover {
+  background-color:#aaa;
+}
+
+#dialog-overlay {
+  position:fixed !important;
+  position:absolute;
+  z-index:999;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  background-color:black;
+  display:none;
+}
+#kotak-lupa {
+  position:fixed;
+  top:20%;
+  left:50%;
+  margin:0px 0px 0px -225px;
+  width:590px;
+  height:auto;
+  background-color:#fff;
+  -webkit-box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+  -moz-box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+  box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+  z-index:1000;
+  display:none;
+  -o-transition:2s ease-out; -moz-transition:2s ease-out; -webkit-transition:2s ease-out
+}
+#kotak-lupa *:focus {
+  outline:none;
+}
+
+#kotak-lupa h3.title {
+  background-color:grey;
+  padding:10px 15px;
+  color:#fff;
+  font:normal 16px Arial,Sans-Serif;
+  margin:0px 0px 0px 0px;
+  position:relative;
+}
+
+#kotak-lupa h3.title a {
+  position:absolute;
+  top:10px;
+  right:15px;
+  color:#fff;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+#kotak-lupa .isi-lupa {
+  margin:15px;
+  font:normal 12px Arial,Sans-Serif;
+}
+
+#kotak-lupa .button-wrapper {
+  padding:10px 15px 0px;
+  border-top:1px solid grey;
+  margin-top:15px;
+}
+
+#kotak-lupa .button-wrapper button {
+  background-color:grey;
+  border:none;
+  font:bold 12px Arial,Sans-Serif;
+  color:#fff;
+  padding:5px 10px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  cursor:pointer;
+}
+
+#kotak-lupa .button-wrapper button:hover {
+  background-color:#aaa;
+}
+
+#lupa-overlay {
+  position:fixed !important;
+  position:absolute;
+  z-index:999;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  background-color:black;
+  display:none;
+}
+.webtamp{
+width:200px;
+height:100px;
+color:black;
+background:#fff;
+
+}
