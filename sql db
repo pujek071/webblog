@@ -1,0 +1,103 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Waktu pembuatan: 04. September 2018 jam 14:35
+-- Versi Server: 5.0.41
+-- Versi PHP: 5.2.2
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Database: `web_blog`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Struktur dari tabel `kategori_artikel`
+-- 
+
+CREATE TABLE `kategori_artikel` (
+  `kdkategori` int(11) NOT NULL auto_increment,
+  `kategori` varchar(35) default NULL,
+  PRIMARY KEY  (`kdkategori`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+
+-- 
+-- Dumping data untuk tabel `kategori_artikel`
+-- 
+
+INSERT INTO `kategori_artikel` VALUES (1, 'Teknologi');
+INSERT INTO `kategori_artikel` VALUES (18, 'Sport');
+
+-- --------------------------------------------------------
+
+-- 
+-- Struktur dari tabel `komentar`
+-- 
+
+CREATE TABLE `komentar` (
+  `id_kontak` int(11) NOT NULL auto_increment,
+  `title` varchar(100) collate latin1_general_ci NOT NULL,
+  `nama` varchar(200) collate latin1_general_ci NOT NULL,
+  `email` varchar(200) collate latin1_general_ci NOT NULL,
+  `subjek` varchar(200) collate latin1_general_ci NOT NULL,
+  `komentar` varchar(200) collate latin1_general_ci NOT NULL,
+  PRIMARY KEY  (`id_kontak`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=12 ;
+
+-- 
+-- Dumping data untuk tabel `komentar`
+-- 
+
+INSERT INTO `komentar` VALUES (10, 'title', 'puji', 'pur@gmail.com', 'test', 'terrrst');
+INSERT INTO `komentar` VALUES (11, 'Galaxy A9 Star, Jagoan Baru Samsung di Kelas Menengah', 'trrtt', 'trrtt@cok.com', 'ytttyyatt', 'Artikel ini telah tayang di Kompas.com dengan judul "Mengulas Masalah "Bug" Kamera di Pocophone F1",');
+
+-- --------------------------------------------------------
+
+-- 
+-- Struktur dari tabel `tabeluser`
+-- 
+
+CREATE TABLE `tabeluser` (
+  `userid` varchar(200) collate latin1_general_ci NOT NULL,
+  `password` varchar(200) collate latin1_general_ci NOT NULL,
+  `name` varchar(200) collate latin1_general_ci NOT NULL,
+  `level` varchar(200) collate latin1_general_ci NOT NULL,
+  PRIMARY KEY  (`userid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+-- 
+-- Dumping data untuk tabel `tabeluser`
+-- 
+
+INSERT INTO `tabeluser` VALUES ('admin', 'admin', 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+-- 
+-- Struktur dari tabel `tb_artikel`
+-- 
+
+CREATE TABLE `tb_artikel` (
+  `idArtikel` int(11) NOT NULL auto_increment,
+  `title` varchar(100) NOT NULL,
+  `content` text NOT NULL,
+  `author` varchar(30) NOT NULL,
+  `tanggalPub` varchar(10) NOT NULL,
+  `kdkategori` int(11) NOT NULL,
+  `file_gambar` varchar(100) NOT NULL,
+  `views` int(11) NOT NULL,
+  PRIMARY KEY  (`idArtikel`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
+
+-- 
+-- Dumping data untuk tabel `tb_artikel`
+-- 
+
+INSERT INTO `tb_artikel` VALUES (33, 'Galaxy A9 Star, Jagoan Baru Samsung di Kelas Menengah', 'KOMPAS.com - Layaknya barang produksi masal, kadang ada saja masalah yang menimpa smartphone dan baru mengemuka ketika sudah berada di tangan konsumen. Itu pula agaknya yang terjadi ketika admin akun Instagram K2 Gadgets menjajal smartphone Pocophone F1 di toko Erafone di sebuah mal di Jakarta. Kamera ponsel flagship murah besutan Xiaomi tersebut mengalami error dan tidak bisa dibuka dengan aplikasi kamera. Kendala yang sama terulang lagi dengan dua Pocophone F1 lain yang diberikan sebagai pengganti sehingga total terdapat tiga unit Pocophone dengan kamera bermasalah. Akhir cerita, uang pembelian dikembalikan ke K2 Gadgets dan Pocophone tak jadi dibawa pulang. KompasTekno coba mereplikasi problem kamera pada unit Pocophone F1 yang dikirimkan oleh Xiaomi sebagai sample. Unit Pocophone F1 di tangan KompasTekno merupakan versi  final dalam boks retail tersegel. Ternyata masalah kamera seperti yang dideskripsikan oleh K2 Gadgets segera muncul. Aplikasi kamera Pocophone F1 mendadak mogok ketika KompasTekno menjajal mode Portrait untuk simulasi bokeh (background blur) dengan kamera ganda sang perangkat. Baca juga: Pocophone F1 yang Dijual Xiaomi di Indonesia Dilaporkan Bermasalah Sebelumnya aplikasi kamera baik-baik saja  ketika dicoba menangkap gambar dengan mode lain, termasuk ketika menjajal selfie dengan kamera depan. Beberapa saat setelah berpindah mode ke Portrait, tampilan preview di layar mulai tampak terpatah-patah, kemudian terdiam (freeze). Ponsel lalu menampilkan pesan kesalahan berbunyi &#65533;Can&#65533;t connect to camera&#65533; (tidak bisa terhubung ke kamera). Kamera membeku Masalah yang sama secara konsisten terulang tiap kali aplikasi kamera bawaan Pocophone F1 dicoba untuk mengambil foto dengan mode Portrait, terutama ketika titik fokus dipindah-pindah dalam frame atau melakukan panning. Saat itulah tampilan preview menjadi patah-patah, sebelum akhirnya membeku. Dari sini, ada masalah lanjutan yang sifatnya agak random. Setelah mengalami error, kadang kamera Pocophone F1 masih bisa digunakan dengan menutup dan membuka kembali aplikasi kamera. Kadang pula, setelah membeku di mode Portrait, aplikasi kamera bisa dijalankan kembali dengan berpindah ke mode pengambilan gambar lain. Bisa juga pulih sendiri setelah beberapa lama terdiam di mode Portrait. Di kesempatan lain, setelah mengalami error dan aplikasi dibuka kembali, kamera mogok sama sekali dan hanya menampikan layar preview gelap gulita . Apabila ini yang terjadi, Pocophone F1 akan menampilkan pesan error dengan anjuran untuk me-restart ponsel.\r\n\r\nArtikel ini telah tayang di Kompas.com dengan judul "Mengulas Masalah "Bug" Kamera di Pocophone F1", ', 'kompas.com', '2018-09-02', 1, 'gambar/3417910525.jpg', 26);
+INSERT INTO `tb_artikel` VALUES (32, 'Lenovo Rilis ThinkPad X1 Extreme Penantang MacBook Pro  Artikel ini telah tayang di Kompas.com denga', 'KOMPAS.com - Ajang eksebisi IFA 2018 di Berlin, Jerman pada pekan ini turut dimanfaatkan oleh Lenovo untuk memperkenalkan produk laptop baru yang duduk di kelas atas. Bernama ThinkPad X1 Extreme, laptop bersangkutan dirancang untuk para pekerja profesional dengan tuntutan kinerja tinggi. Lantaran spesifikasinya yang tinggi dan fisiknya yang relatif ramping, sebagaimana dirangkum KompasTekno dari The Verge, Jumat (31/8/2018), ThinkPad X1 Extreme dijuluki sebagai pesaing MacBook Pro besutan Apple. Spesifikasi ThinkPad X1 Extreme pun tergolong mumpuni, mencakup dapur pacu prosesor Intel Core i7 generasi ke-8, RAM DDR4 hingga 64 GB, dan media penyimpanan PCIe SSD hingga 2 TB. Ada juga kartu grafis (GPU) GeForce 1050 Ti dengan dukungan headset Virtual Reality (VR) dan Mixed Reality (MR) macam Oculus Rift atau Mirage Solo, serta audio Dolby Atmos untuk mendukung keperluan entertainment. Baca juga: MacBook Pro Terbaru Bisa Copy File 4 GB dalam 2 Detik Fitur lain termasuk dua buah port Thunderbolt 3 (USB type-C), dua buah port USB 3.1, SD card reader, smart card reader, konektor jack audio 3,5 mm, konektor HDMI 2.0, dan pemindai sidik jari. ThinkPad X1 Extreme memiliki bodi dengan ketebalan 18,4 mm dan bobot 1,7 kg, lebih berat dibandingkan laptop terdahulu, X1 Carbon karena layarnya memang lebih besar (15,6 inci, dibanding 14 inci untuk X1 Carbon). Meski begitu, ThinkPad X1 Extreme masih termasuk ringan untuk laptop ukuran 15,6 inci. ThinkPad X1 Extreme menjalankan sistem operasi Windows 10 dan memiliki dukungan port legacy jauh lebih lengkap dibanding MacBook Pro, seperti port USB 3.1 dan card reader tadi. Lenovo kini menyediakan tiga model ThinkPad X1 Extreme di situsnya, masing-masing dibedakan dari spesifikasi prosesor, kapasitas memori dan SSD, dan jenis layar (15,6 inci full-HD atau 15 inci UHD/4K dengan dukungan multi-touch). Banderol ThinkPad X1 Extreme dipatok mulai 2.079 dollar AS (Rp 30,8 juta) di situs Lenovo. Pengirimannya dijadwalkan mulai September 2018 mendatang.\r\n\r\nArtikel ini telah tayang di Kompas.com dengan judul "Lenovo Rilis ThinkPad X1 Extreme Penantang MacBook Pro", https://tekno.kompas.com/read/2018/08/31/18210017/lenovo-rilis-thinkpad-x1-extreme-penantang-macbook-pro. \r\nPenulis : Oik Yusuf\r\nEditor : Reska K. Nistanto', 'kompas.com', '2018-09-03', 1, 'gambar/1109551743.png', 0);
+INSERT INTO `tb_artikel` VALUES (34, 'Estimasi Penjualan Perdana Pocophone F1, 68.000 Unit dalam 5 Menit  Artikel ini telah tayang di Komp', 'KOMPAS.com - Belum sebulan dirilis, ponsel Pocophone F1 dikabarkan sudah memiliki banyak peminat. Bahkan kabarnya ponsel tersebut sudah terjual lebih dari 68.000 unit dalam hanya dalam waktu lima menit. Hal ini diungkapkan oleh Poco India melalui akun Twitter resminya. Meski tidak mengatakan secara langsung jumlah unit yang terjual, Poco India mengungkapkan jumlah pendapatan yang didulang mencapai 2 miliar Rupee atau sekitar 28.000 dollar AS pada flash sale perdana kemarin. Dikutip KompasTekno dari GSM Arena, Kamis (30/8/2018), jika pendapatan tersebut dibagi oleh harga jual Pocophone F1 versi termahal (415 dollar AS), maka setara 68.000 ponsel Pocophone F1 terjual dalam 5 menit. "Kami senang mengumumkan bahwa kami berhasl mengumpulkan sebanyak 2 miliar Rupee dalam kurang dari 5 menit hari ini. ini membuat jadi penjualan flagship terbesar dan tercepat di Flipkart," ungkap akun Twitter Poco India.\r\n\r\nArtikel ini telah tayang di Kompas.com dengan judul "Estimasi Penjualan Perdana Pocophone F1, 68.000 Unit dalam 5 Menit", \r\n', 'kompas.com', '2018-09-02', 1, 'gambar/3950243566.png', 0);
+INSERT INTO `tb_artikel` VALUES (35, 'Mesin Ninja 150 Paling Pas buat Gokart  Artikel ini telah tayang di Kompas.com dengan judul ', 'BOGOR, KOMPAS.com - Gokart adalah mobil yang khusus hanya digunakan untuk ajang balap. Pada umumnya, mesin yang dipakai merupakan mesin khusus gokart yang diimpor dari luar negeri. Namun demikian, mobil gokart juga bisa dibangun dengan mengggunakan mesin kendaraan lain, lebih tepatnya sepeda motor. Dari keterangan mekanik, ada satu mesin motor yang dianggap paling cocok diaplikasikan ke mobil gokart. Motor tersebut adalah Kawasaki Ninja 150 atau yang bisa dikenal Ninja 2-tak. Topan, mekanik dari Jenderal Racing Team Unjani Cimahi menyebut, mesin Ninja 2-tak merupakan satu-satunya mesin motor yang bisa diaplikasikan di gokart. Pasalnya, mesin Ninja 2-tak sudah dilengkapi sistem pendingin cairan (radiator), salah satu komponen wajib pada mobil gokart.\r\nMenurut Odi, sebenarnya ada mesin motor lain yang juga cocok dipakai di gokart, yakni Honda NSR. Hanya saja, harganya relatif lebih mahal. Belum lagi komponennya juga lebih sedikit. Pasalnya, NSR adalah motor yang sudah lama dihentikan produksinya. Berbeda dengan Ninja yang baru resmi dihentikan produksinya pada 2015. Baca juga: Perlukah Kawasaki Ninja 2-Tak Regenerasi? "Makanya anak-anak lebih banyak pakai mesin Ninja. Selain performanya enak, biayanya juga lebih murah," ujar Odi.', 'kompas.com', '2018-09-02', 2, 'gambar/3647455895.jpg', 1);
